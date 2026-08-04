@@ -1,0 +1,28 @@
+# ===========================
+# ASM Brain - Obsidian
+# ===========================
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Obsidian local workspace (user-specific)
+.obsidian/workspace.json
+.obsidian/cache/
+
+# Obsidian trash
+.trash/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Node (future-proof)
+node_modules/
