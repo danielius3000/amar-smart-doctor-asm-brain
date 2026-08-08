@@ -2,7 +2,7 @@
 
 **Document ID:** ASM-ROADMAP-001
 **Document Name:** Amar Smart Doctor Master Roadmap
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Active
 **Owner:** Amar Smart Doctor
 **System:** ASM Brain
@@ -28,8 +28,6 @@ It defines:
 - public MVP direction
 - long-term expansion
 
-The roadmap exists to prevent project drift, forgotten decisions, duplicated work, and premature implementation.
-
 All significant project work should be traceable to a roadmap milestone.
 
 ---
@@ -42,17 +40,19 @@ The roadmap does not replace detailed specifications.
 
 The relationship is:
 
-    Master Roadmap
-          ↓
-       Milestone
-          ↓
-    Architecture / Specification
-          ↓
-      Implementation
-          ↓
-       Verification
-          ↓
-         Release
+```text
+Master Roadmap
+      ↓
+   Milestone
+      ↓
+Architecture / Specification
+      ↓
+  Implementation
+      ↓
+   Verification
+      ↓
+     Release
+```
 
 Individual standards and architecture documents remain authoritative for their respective domains.
 
@@ -77,36 +77,38 @@ Domain standards determine:
 
 The long-term architecture is based on three major layers:
 
-    AMAR SMART DOCTOR
-            │
-    ┌───────┴────────┐
-    │                │
-    KNOWLEDGE     INTELLIGENCE
-      LAYER          LAYER
-    │                │
-    │                ├── AI Workforce
-    │                ├── Human Workforce
-    │                ├── Governance
-    │                └── Orchestration
-    │
-    ├── Knowledge Assets
-    ├── Evidence
-    ├── Taxonomy
-    └── Relationships
-            │
-            └──────────────┐
-                           │
-                      EXPERIENCE
-                         LAYER
-                           │
-              ┌────────────┼────────────┐
-              │            │            │
-           Website       Mobile        APIs
-              │
-           Search
-           Chat
-           Education
-           Future Products
+```text
+AMAR SMART DOCTOR
+        │
+┌───────┴────────┐
+│                │
+KNOWLEDGE     INTELLIGENCE
+  LAYER          LAYER
+│                │
+│                ├── AI Workforce
+│                ├── Human Workforce
+│                ├── Governance
+│                └── Orchestration
+│
+├── Knowledge Assets
+├── Evidence
+├── Taxonomy
+└── Relationships
+        │
+        └──────────────┐
+                       │
+                  EXPERIENCE
+                     LAYER
+                       │
+          ┌────────────┼────────────┐
+          │            │            │
+       Website       Mobile        APIs
+          │
+       Search
+       Chat
+       Education
+       Future Products
+```
 
 The central product principle is:
 
@@ -128,15 +130,17 @@ Pages, articles, videos, social content, search experiences, AI experiences, and
 
 Therefore:
 
-    Knowledge
-        ↓
-    Governed Knowledge Assets
-        ↓
-    Platform
-        ↓
-    Multiple Experiences
-        ↓
-    Multiple Products
+```text
+Knowledge
+    ↓
+Governed Knowledge Assets
+    ↓
+Platform
+    ↓
+Multiple Experiences
+    ↓
+Multiple Products
+```
 
 AI is an accelerator, not the source of truth.
 
@@ -158,8 +162,6 @@ AI-generated information must not become authoritative without appropriate verif
 
 # 5. Roadmap Status Model
 
-The following status symbols are used:
-
 | Symbol | Meaning |
 |---|---|
 | ✅ | Complete and verified |
@@ -170,29 +172,29 @@ The following status symbols are used:
 | ⛔ | Blocked |
 | ❌ | Cancelled / removed |
 
-A milestone is not considered complete merely because drafting has finished.
+A milestone is complete only after:
 
-A milestone becomes complete only after:
-
-    Architecture
-        ↓
-      Draft
-        ↓
-      Review
-        ↓
-     Approval
-        ↓
-   Final Artifact
-        ↓
-   Git Verification
-        ↓
-      Commit
-        ↓
-    Release Tag
-        ↓
-       Push
-        ↓
+```text
+Architecture
+    ↓
+  Draft
+    ↓
+  Review
+    ↓
+ Approval
+    ↓
+Final Artifact
+    ↓
+ Git Verification
+    ↓
+ Commit
+    ↓
+ Release Tag
+    ↓
+ Push
+    ↓
  Clean Working Tree
+```
 
 ---
 
@@ -320,31 +322,22 @@ All AI roles remain subject to appropriate human governance and review gates.
 
 # S1-04 — Knowledge Foundation
 
-**Status:** 🟢 CURRENT — FINAL FOUNDATION REVIEW
+**Status:** ✅ COMPLETE
 
 ## Objective
 
 Define the governed knowledge system that becomes the foundation of every future Amar Smart Doctor product.
 
-The original S1-04 roadmap defined the knowledge foundation through:
-
-1. Knowledge Asset Standard
-2. Knowledge Engineering Framework
-3. Medical Taxonomy
-4. Evidence Standard
-5. Knowledge Lifecycle
-6. Knowledge Versioning
-
-The architecture has since evolved.
-
 The current Knowledge Foundation consists of six governed standards:
 
-    KAS
-    KEF
-    MTS
-    ES
-    KLS
-    KDRS
+```text
+KAS
+KEF
+MTS
+ES
+KLS
+KDRS
+```
 
 These six standards collectively define:
 
@@ -357,11 +350,9 @@ These six standards collectively define:
 
 ## Important Architectural Note
 
-The sequence above represents the roadmap and documentation sequence.
-
-It must **not** be interpreted as a strict technical dependency graph.
-
 The standards are interconnected and operate as a governed Knowledge System.
+
+The sequence in this roadmap represents the documentation and execution sequence. It must not be interpreted as a strict technical dependency graph.
 
 ---
 
@@ -369,9 +360,7 @@ The standards are interconnected and operate as a governed Knowledge System.
 
 **Status:** ✅ COMPLETE
 
-**Release:**
-
-`S1-04.1-KAS-v1.0`
+**Release:** `S1-04.1-KAS-v1.0`
 
 ## Purpose
 
@@ -385,9 +374,7 @@ The standard establishes the governed identity, structure, metadata, content, ev
 
 **Status:** ✅ COMPLETE
 
-**Release:**
-
-`S1-04.2-KEF-v1.0`
+**Release:** `S1-04.2-KEF-v1.0`
 
 ## Purpose
 
@@ -395,25 +382,27 @@ Define how governed Knowledge Assets are researched, constructed, reviewed, main
 
 Conceptual pipeline:
 
-    Medical Evidence
-          ↓
-    Evidence Intake
-          ↓
-       Validation
-          ↓
-    Knowledge Extraction
-          ↓
-    Knowledge Structuring
-          ↓
-     Medical Review
-          ↓
-        Approval
-          ↓
-    Knowledge Asset
-          ↓
-       ASM Brain
-          ↓
-    Product Generation
+```text
+Medical Evidence
+      ↓
+Evidence Intake
+      ↓
+   Validation
+      ↓
+Knowledge Extraction
+      ↓
+Knowledge Structuring
+      ↓
+ Medical Review
+      ↓
+    Approval
+      ↓
+Knowledge Asset
+      ↓
+   ASM Brain
+      ↓
+Product Generation
+```
 
 The framework also establishes AI + Human collaboration.
 
@@ -423,9 +412,7 @@ The framework also establishes AI + Human collaboration.
 
 **Status:** ✅ COMPLETE
 
-**Release:**
-
-`S1-04.3-MTS-v1.0`
+**Release:** `S1-04.3-MTS-v1.0`
 
 ## Purpose
 
@@ -435,15 +422,17 @@ The taxonomy establishes the conceptual foundation for future medical knowledge 
 
 Example conceptual structure:
 
-    Disease
-     ├── Symptoms
-     ├── Causes
-     ├── Risk Factors
-     ├── Diagnosis
-     ├── Treatment
-     ├── Medicines
-     ├── Procedures
-     └── Related Conditions
+```text
+Disease
+ ├── Symptoms
+ ├── Causes
+ ├── Risk Factors
+ ├── Diagnosis
+ ├── Treatment
+ ├── Medicines
+ ├── Procedures
+ └── Related Conditions
+```
 
 ---
 
@@ -451,9 +440,7 @@ Example conceptual structure:
 
 **Status:** ✅ COMPLETE
 
-**Release:**
-
-`S1-04.4-ES-v1.0`
+**Release:** `S1-04.4-ES-v1.0`
 
 ## Purpose
 
@@ -477,9 +464,7 @@ Core areas include:
 
 **Status:** ✅ COMPLETE
 
-**Release:**
-
-`S1-04.5-KLS-v1.0`
+**Release:** `S1-04.5-KLS-v1.0`
 
 ## Purpose
 
@@ -487,21 +472,23 @@ Define how Knowledge Assets live and evolve over time.
 
 Conceptual lifecycle:
 
-    Draft
-      ↓
-    Review
-      ↓
-    Approved
-      ↓
-    Published
-      ↓
-    Monitoring
-      ↓
-    Update
-      ↓
-    Re-review
-      ↓
-    Archive
+```text
+Draft
+  ↓
+Review
+  ↓
+Approved
+  ↓
+Published
+  ↓
+Monitoring
+  ↓
+Update
+  ↓
+Re-review
+  ↓
+Archive
+```
 
 The lifecycle establishes controlled knowledge evolution rather than uncontrolled document editing.
 
@@ -511,9 +498,7 @@ The lifecycle establishes controlled knowledge evolution rather than uncontrolle
 
 **Status:** ✅ COMPLETE
 
-**Release:**
-
-`S1-04.6-KDRS-v1.0`
+**Release:** `S1-04.6-KDRS-v1.0`
 
 ## Purpose
 
@@ -540,7 +525,7 @@ KDRS provides the foundation for future knowledge graph and dependency analysis 
 
 # S1-04.7 — Knowledge Foundation Integration Review
 
-**Status:** 🟡 NEXT
+**Status:** ✅ COMPLETE
 
 ## Objective
 
@@ -550,7 +535,7 @@ This is not another standard.
 
 It is a cross-standard architecture review.
 
-## Standards Under Review
+## Standards Reviewed
 
 - KAS v1.0
 - KEF v1.0
@@ -562,8 +547,6 @@ It is a cross-standard architecture review.
 ## Review Areas
 
 ### 1. Terminology Consistency
-
-Verify that all six standards use compatible definitions for:
 
 - Knowledge Asset
 - evidence
@@ -586,7 +569,7 @@ Verify that the standards form a coherent dependency structure.
 
 ### 4. Evidence Integration
 
-Verify that evidence requirements from ES are correctly consumed by KAS, KEF, and KLS.
+Verify that ES requirements are correctly consumed by KAS, KEF, and KLS.
 
 ### 5. Taxonomy Integration
 
@@ -598,15 +581,13 @@ Verify that KLS correctly governs changes to assets, evidence, relationships, an
 
 ### 7. Relationship Integration
 
-Verify that KDRS correctly governs the relationships defined or referenced by the other standards.
+Verify that KDRS correctly governs relationships defined or referenced by the other standards.
 
 ### 8. Versioning Integration
 
-Verify that versioning responsibilities are properly distributed across KAS, KLS, and KDRS.
+Versioning responsibilities are distributed across KAS, KLS, and KDRS.
 
-There is intentionally **no separate Knowledge Versioning document** at this stage.
-
-Versioning is treated as a cross-cutting governance concern rather than another standalone standard.
+There is intentionally no separate Knowledge Versioning document at this stage.
 
 ### 9. Implementation Readiness
 
@@ -616,31 +597,39 @@ Determine whether an engineer can implement the Knowledge System without inventi
 
 Determine whether S1-04 is ready to close.
 
+## Result
+
+**S1-04.7 completed and approved.**
+
+The integrated Knowledge Foundation is the verified architectural baseline for Phase 2.
+
 ---
 
 # S1-04 EXIT CRITERIA
 
-S1-04 is complete only when:
+All S1-04 foundation standards and the integration review have been completed and approved.
 
-- KAS v1.0 is approved and released
-- KEF v1.0 is approved and released
-- MTS v1.0 is approved and released
-- ES v1.0 is approved and released
-- KLS v1.0 is approved and released
-- KDRS v1.0 is approved and released
-- cross-standard consistency review is completed
-- contradictions are resolved or formally accepted
-- authority boundaries are clear
-- implementation boundaries are clear
-- the integrated Knowledge Foundation is approved
-- Git repository is clean
-- the S1-04 completion checkpoint is released
+Completed:
+
+- KAS v1.0 approved and released
+- KEF v1.0 approved and released
+- MTS v1.0 approved and released
+- ES v1.0 approved and released
+- KLS v1.0 approved and released
+- KDRS v1.0 approved and released
+- cross-standard consistency review completed
+- authority boundaries reviewed
+- implementation boundaries reviewed
+- integrated Knowledge Foundation approved
+- S1-04 formally closed
+
+**S1-04: COMPLETE**
 
 ---
 
 # 7. PHASE 2 — PLATFORM ENGINEERING
 
-**Status:** ⬜ FUTURE
+**Status:** 🟢 CURRENT
 
 ## Objective
 
@@ -651,6 +640,8 @@ The platform must be built around the Knowledge System rather than allowing the 
 ---
 
 # P2-01 — Knowledge Platform Architecture
+
+**Status:** 🟡 NEXT
 
 Define:
 
@@ -675,6 +666,8 @@ Platform Architecture specification.
 
 # P2-02 — Knowledge Data Layer
 
+**Status:** ⬜ PLANNED
+
 Build:
 
 - Knowledge Asset storage
@@ -694,6 +687,8 @@ The implementation must follow the six Knowledge System standards.
 
 # P2-03 — Knowledge API
 
+**Status:** ⬜ PLANNED
+
 Create the governed programmatic interface through which:
 
 - Website
@@ -710,27 +705,31 @@ The API must not bypass Knowledge System governance.
 
 # P2-04 — AI Workforce Infrastructure
 
+**Status:** ⬜ PLANNED
+
 Operationalize the future AI workforce.
 
 Potential roles include:
 
-    Research AI
-          ↓
-    Curation AI
-          ↓
-    Knowledge Engineering AI
-          ↓
-    Medical Reviewer AI
-          ↓
-    Content AI
-          ↓
-    Translation AI
-          ↓
-    SEO AI
-          ↓
-    Publishing AI
-          ↓
-    Analytics AI
+```text
+Research AI
+      ↓
+Curation AI
+      ↓
+Knowledge Engineering AI
+      ↓
+Medical Reviewer AI
+      ↓
+Content AI
+      ↓
+Translation AI
+      ↓
+SEO AI
+      ↓
+Publishing AI
+      ↓
+Analytics AI
+```
 
 The objective is not:
 
@@ -745,6 +744,8 @@ Human review gates remain mandatory where required by risk and governance.
 ---
 
 # P2-05 — Search & Retrieval
+
+**Status:** ⬜ PLANNED
 
 Build the system capable of retrieving governed knowledge reliably.
 
@@ -891,7 +892,7 @@ A smaller set of excellent, governed Knowledge Assets is preferable to thousands
 
 This is a strategic planning target, not a fixed promise.
 
-The October–November 2026 target must not override:
+The target must not override:
 
 - medical quality
 - governance
@@ -903,7 +904,7 @@ The October–November 2026 target must not override:
 
 If those criteria are not satisfied, the launch moves rather than quality standards being reduced.
 
-**The calendar serves the product. The product does not serve the calendar.**
+> **The calendar serves the product. The product does not serve the calendar.**
 
 ---
 
@@ -915,31 +916,33 @@ Once the Knowledge Platform and MVP experience are operational, begin automating
 
 Potential pipeline:
 
-    Research
-       ↓
-    Evidence Collection
-       ↓
-    Curation
-       ↓
-    Knowledge Extraction
-       ↓
-    Knowledge Asset Creation
-       ↓
-    Medical Review
-       ↓
-    Approval
-       ↓
-    Content Generation
-       ↓
-    Translation
-       ↓
-    SEO Optimization
-       ↓
-    Publishing
-       ↓
-    Analytics
-       ↓
-    Knowledge Improvement
+```text
+Research
+   ↓
+Evidence Collection
+   ↓
+Curation
+   ↓
+Knowledge Extraction
+   ↓
+Knowledge Asset Creation
+   ↓
+Medical Review
+   ↓
+Approval
+   ↓
+Content Generation
+   ↓
+Translation
+   ↓
+SEO Optimization
+   ↓
+Publishing
+   ↓
+Analytics
+   ↓
+Knowledge Improvement
+```
 
 The goal is controlled automation, not uncontrolled content generation.
 
@@ -961,7 +964,7 @@ Once the core platform proves itself, potential products include:
 - Research Platform
 - Doctor Appointment Platform
 - Enterprise Knowledge API
-- Future Medical related solutions
+- future medical-related solutions
 
 These should be developed only when justified by:
 
@@ -992,7 +995,7 @@ We design for scalability without prematurely implementing global complexity.
 
 # 12. Current Git Release Baseline
 
-The current verified Knowledge System release baseline is:
+Verified released baseline:
 
 - `S1-02-foundation-v1.0`
 - `S1-03-company-foundation-v1.0`
@@ -1003,39 +1006,45 @@ The current verified Knowledge System release baseline is:
 - `S1-04.5-KLS-v1.0`
 - `S1-04.6-KDRS-v1.0`
 
-The latest verified Knowledge System release is:
+Latest **verified Git release tag currently established**:
 
 `S1-04.6-KDRS-v1.0`
 
-S1-04 remains open pending the integrated Knowledge Foundation review.
+The S1-04.7 integration review has been completed and approved in the roadmap and architecture record.
+
+**Release checkpoint note:** the Git release tag for the S1-04.7 completion checkpoint must be created before the repository is considered the final released S1-04 baseline.
 
 ---
 
 # 13. Current Project State
 
-**Last verified milestone:**
+**Current phase:**
 
-`S1-04.6 — KDRS v1.0`
+`PHASE 2 — PLATFORM ENGINEERING`
 
-Git release:
+**Current milestone:**
 
-`S1-04.6-KDRS-v1.0`
+`P2-01 — Knowledge Platform Architecture`
 
-Current repository state at the latest verified checkpoint:
+**Status:** 🟢 CURRENT
 
-    main
-      ↓
-    origin/main synchronized
-      ↓
-    working tree clean
+**Next milestone:**
+
+`P2-01 — Knowledge Platform Architecture`
+
+The S1-04 Knowledge Foundation is closed at the project-governance level.
+
+Before implementation begins, the S1-04.7 Git completion checkpoint must be created and verified.
 
 ---
 
 # 14. Knowledge System Current State
 
-The following documents now exist under:
+The following documents exist under:
 
-    35. Knowledge System/
+```text
+35. Knowledge System/
+```
 
 - Evidence Standard.md
 - Knowledge Asset Standard.md
@@ -1053,80 +1062,79 @@ Current released standards:
 - KLS v1.0
 - KDRS v1.0
 
-All six are considered individually released.
+All six standards are individually released.
 
-The remaining S1-04 work is:
+The integrated Knowledge Foundation has been reviewed and approved.
 
-> **Integrated architecture review and formal Knowledge Foundation closure.**
+**S1-04: COMPLETE**
 
 ---
 
 # 15. Current Position
 
-    AMAR SMART DOCTOR
+```text
+AMAR SMART DOCTOR
+│
+├── PHASE 1 — FOUNDATION
+│   │
+│   ├── S1-01 Repository Foundation       ✅
+│   ├── S1-02 ASM Brain Foundation        ✅
+│   ├── S1-03 Organization Foundation     ✅
+│   └── S1-04 Knowledge Foundation         ✅
+│       │
+│       ├── KAS v1.0                      ✅
+│       ├── KEF v1.0                      ✅
+│       ├── MTS v1.0                      ✅
+│       ├── ES v1.0                       ✅
+│       ├── KLS v1.0                      ✅
+│       ├── KDRS v1.0                     ✅
+│       └── Integration Review            ✅
+│
+├── PHASE 2 — PLATFORM ENGINEERING        🟢
+│   │
+│   ├── P2-01 Platform Architecture       🟢 CURRENT
+│   ├── P2-02 Knowledge Data Layer        ⬜
+│   ├── P2-03 Knowledge API               ⬜
+│   ├── P2-04 AI Workforce Infrastructure ⬜
+│   └── P2-05 Search & Retrieval           ⬜
+│
+├── PHASE 3 — MVP PUBLIC PRODUCT          ⬜
+│   │
+│   ├── Public Website
+│   ├── Search
+│   ├── Knowledge Experience
+│   ├── SEO Architecture
+│   ├── Analytics
+│   └── Editorial/Admin
+│
+├── PHASE 4 — AI KNOWLEDGE OPERATIONS     ⬜
+│   │
+│   ├── Research
+│   ├── Curation
+│   ├── Knowledge Engineering
+│   ├── Medical Review
+│   ├── Content
+│   ├── Translation
+│   ├── SEO
+│   ├── Publishing
+│   └── Analytics
+│
+├── PHASE 5 — SCALE & ECOSYSTEM           🔵
+│   │
+│   ├── Mobile
+│   ├── Doctor Platform
+│   ├── Hospital Platform
+│   ├── Education
+│   ├── Research
+│   └── Enterprise API
+│
+└── PHASE 6 — GLOBAL PLATFORM             🔵
     │
-    ├── PHASE 1 — FOUNDATION
-    │   │
-    │   ├── S1-01 Repository Foundation       ✅
-    │   ├── S1-02 ASM Brain Foundation        ✅
-    │   ├── S1-03 Organization Foundation     ✅
-    │   │
-    │   └── S1-04 Knowledge Foundation        🟢
-    │       │
-    │       ├── KAS v1.0                     ✅
-    │       ├── KEF v1.0                     ✅
-    │       ├── MTS v1.0                     ✅
-    │       ├── ES v1.0                      ✅
-    │       ├── KLS v1.0                     ✅
-    │       ├── KDRS v1.0                    ✅
-    │       │
-    │       └── Integration Review            🟡 NEXT
-    │
-    ├── PHASE 2 — PLATFORM ENGINEERING        ⬜
-    │   │
-    │   ├── Platform Architecture
-    │   ├── Knowledge Data Layer
-    │   ├── Knowledge API
-    │   ├── AI Workforce Infrastructure
-    │   └── Search & Retrieval
-    │
-    ├── PHASE 3 — MVP PUBLIC PRODUCT          ⬜
-    │   │
-    │   ├── Public Website
-    │   ├── Search
-    │   ├── Knowledge Pages
-    │   ├── Doctor Discovery
-    │   ├── SEO
-    │   ├── Analytics
-    │   └── Editorial/Admin
-    │
-    ├── PHASE 4 — AI KNOWLEDGE OPERATIONS     ⬜
-    │   │
-    │   ├── Research
-    │   ├── Curation
-    │   ├── Knowledge Engineering
-    │   ├── Medical Review
-    │   ├── Content
-    │   ├── Translation
-    │   ├── SEO
-    │   ├── Publishing
-    │   └── Analytics
-    │
-    ├── PHASE 5 — SCALE & ECOSYSTEM           🔵
-    │   │
-    │   ├── Mobile
-    │   ├── Doctor Platform
-    │   ├── Hospital Platform
-    │   ├── Education
-    │   ├── Research
-    │   └── Enterprise API
-    │
-    └── PHASE 6 — GLOBAL PLATFORM             🔵
-        │
-        ├── Multilingual
-        ├── Multi-country
-        ├── Regional Governance
-        └── Global Knowledge Platform
+    ├── Multilingual
+    ├── Multi-country
+    ├── Regional Governance
+    └── Global Knowledge Platform
+```
 
 ---
 
@@ -1134,13 +1142,15 @@ The remaining S1-04 work is:
 
 The next project action is:
 
-> **S1-04.7 — Knowledge Foundation Integration Review**
+> **Create and verify the S1-04.7 Git completion checkpoint.**
 
-Do not begin platform implementation yet.
+After that checkpoint is released and the working tree is clean:
 
-The purpose of S1-04.7 is to verify that the six released Knowledge System standards function together as one coherent governed architecture.
+> **P2-01 — Knowledge Platform Architecture**
 
-Only after S1-04.7 passes should we formally close S1-04 and proceed to Phase 2.
+Do not begin platform implementation before P2-01 architecture is approved.
+
+P2-01 is an architecture milestone, not a coding milestone.
 
 ---
 
@@ -1152,15 +1162,16 @@ Future milestones are planning references only.
 
 The existence of a future item in this roadmap does not authorize its implementation before its scheduled milestone.
 
-For example, while S1-04.7 is active:
+For example, while P2-01 is active:
 
 **CURRENT**
 
-`S1-04.7 Knowledge Foundation Integration Review`
+`P2-01 Knowledge Platform Architecture`
 
 The following remain **NOT NOW**:
 
-- Platform API
+- Knowledge Data Layer implementation
+- Platform API implementation
 - Mobile Application
 - AI Workforce implementation
 - Knowledge Graph implementation
@@ -1172,8 +1183,6 @@ This rule exists to prevent scope creep and premature implementation.
 ---
 
 # 18. Decision Discipline
-
-The following rules apply to the roadmap.
 
 ### Rule 1 — Do not invent milestones casually
 
@@ -1230,7 +1239,8 @@ Significant roadmap changes should be recorded in the project Decision Log.
 
 | Version | Date | Change | Status |
 |---|---|---|---|
-| 1.0 | 2026-08-08 | Formalized the Master Roadmap as the controlling project roadmap; incorporated current S1-04 progress; added KDRS; replaced standalone Knowledge Versioning milestone with cross-cutting version governance; established S1-04.7 integration review; documented Phase 2–6 roadmap and MVP target | Active |
+| 1.0 | 2026-08-08 | Formalized the Master Roadmap as the controlling project roadmap; incorporated S1-04 progress; added KDRS; replaced standalone Knowledge Versioning milestone with cross-cutting version governance; established S1-04.7 integration review; documented Phase 2–6 roadmap and MVP target | Superseded |
+| 1.1 | 2026-08-08 | Closed S1-04 and S1-04.7 in the roadmap; removed obsolete “Integration Review — NEXT” state; corrected current position; advanced roadmap to Phase 2 / P2-01; documented the remaining S1-04 Git release-checkpoint requirement | Active |
 
 ---
 
@@ -1248,15 +1258,17 @@ We do not allow AI to become the source of truth.
 
 We build:
 
-    Governed Knowledge
-          ↓
-    Reliable Platform
-          ↓
-    Useful Products
-          ↓
-    AI-Native Operations
-          ↓
-        Scale
+```text
+Governed Knowledge
+      ↓
+Reliable Platform
+      ↓
+Useful Products
+      ↓
+AI-Native Operations
+      ↓
+    Scale
+```
 
 The objective is not to build the largest system first.
 
