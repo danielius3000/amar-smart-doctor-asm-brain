@@ -48,7 +48,7 @@ Open:
 
 [[20. Product/PRD.md]]
 
-[[20. Product/Roadmap.md]]
+[[Roadmap.md]]
 
 ---
 
