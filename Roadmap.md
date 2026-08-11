@@ -2,13 +2,13 @@
 
 **Document ID:** ASM-ROADMAP-001
 **Document Name:** Amar Smart Doctor Master Roadmap
-**Version:** 1.1
+**Version:** 1.2
 **Status:** Active
 **Owner:** Amar Smart Doctor
 **System:** ASM Brain
 **Repository:** amar-smart-doctor-asm-brain
 **Created:** 2026-08-08
-**Updated:** 2026-08-08
+**Updated:** 2026-08-12
 
 ---
 
@@ -95,13 +95,13 @@ KNOWLEDGE     INTELLIGENCE
 ├── Taxonomy
 └── Relationships
         │
-        └──────────────┐
-                       │
-                  EXPERIENCE
-                     LAYER
-                       │
-          ┌────────────┼────────────┐
-          │            │            │
+        └───────────────┐
+                        │
+                   EXPERIENCE
+                      LAYER
+                        │
+          ┌─────────────┴─────────────┐
+          │             │             │
        Website       Mobile        APIs
           │
        Search
@@ -162,15 +162,15 @@ AI-generated information must not become authoritative without appropriate verif
 
 # 5. Roadmap Status Model
 
-| Symbol | Meaning |
-|---|---|
-| ✅ | Complete and verified |
-| 🟢 | Current / actively being worked on |
-| 🟡 | Next planned milestone |
-| ⬜ | Planned |
-| 🔵 | Long-term |
-| ⛔ | Blocked |
-| ❌ | Cancelled / removed |
+| Symbol | Meaning                            |
+| ------ | ---------------------------------- |
+| ✅     | Complete and verified              |
+| 🟢     | Current / actively being worked on |
+| 🟡     | Next planned milestone             |
+| ⬜     | Planned                            |
+| 🔭     | Long-term                          |
+| ⛔     | Blocked                            |
+| ❌     | Cancelled / removed                |
 
 A milestone is complete only after:
 
@@ -633,9 +633,90 @@ Completed:
 
 ## Objective
 
-Build the actual platform infrastructure that consumes the governed Knowledge System.
+Translate the governed Knowledge Foundation and approved Product & Business Architecture into the technical platform architecture and implementation foundation required for Amar Smart Doctor.
 
-The platform must be built around the Knowledge System rather than allowing the website to become the source of truth.
+Phase 2 begins with product and business architecture before proceeding into technical platform architecture.
+
+The sequence is:
+
+```text
+S1-04 Knowledge Foundation
+      ↓
+P2-00 Product & Business Architecture
+      ↓
+P2-01 Knowledge Platform Architecture
+      ↓
+Platform Engineering
+```
+
+The Knowledge Foundation defines how governed medical knowledge works.
+
+P2-00 defines the product, business, portfolio, and commercial architecture that the platform must support.
+
+P2-01 translates those approved architectural requirements into the technical Knowledge Platform Architecture.
+
+---
+
+# P2-00 — Product & Business Architecture
+
+**Status:** COMPLETE
+
+## Objective
+
+Define the product and business architecture required to translate the Amar Smart Doctor vision and Knowledge Foundation into an executable Phase 1 product and commercial structure.
+
+## Completed Deliverables
+
+### P2-00.1 — Product & Business Architecture
+
+**Status:** COMPLETE
+
+Defines:
+
+- product architecture
+- product boundaries
+- SEO-first product direction
+- Knowledge Engine relationship
+- Search Engine Strategy
+- Discovery Engine
+- Appointment Product
+- Canonical Healthcare Identity principle
+- user value journey
+- Phase 1 product architecture
+
+### P2-00.2 — Phase 1 Product Portfolio & Commercial Architecture
+
+**Status:** COMPLETE
+
+Defines:
+
+- Phase 1 product portfolio
+- product boundaries
+- commercial architecture
+- relationship between platform capabilities and products
+- Phase 1 commercial direction
+- product sequencing
+
+## Architectural Role
+
+P2-00 provides the approved product and business architecture inputs required by P2-01.
+
+P2-00 does not replace the Knowledge Foundation or the technical platform architecture.
+
+The relationship is:
+
+```text
+S1-04
+Knowledge Foundation
+      ↓
+P2-00
+Product & Business Architecture
+      ↓
+P2-01
+Knowledge Platform Architecture
+```
+
+**P2-00: COMPLETE**
 
 ---
 
@@ -643,7 +724,20 @@ The platform must be built around the Knowledge System rather than allowing the 
 
 **Status:** 🟡 NEXT
 
-Define:
+## Objective
+
+Define the technical architecture of the Amar Smart Doctor Knowledge Platform.
+
+P2-01 must translate the approved Product & Business Architecture and the S1-04 Knowledge Foundation into a coherent technical platform architecture.
+
+## Principal Architectural Inputs
+
+- S1-04 Knowledge Foundation
+- P2-00 Product & Business Architecture
+- P2-00.1 Product & Business Architecture
+- P2-00.2 Phase 1 Product Portfolio & Commercial Architecture
+
+## Define
 
 - core platform architecture
 - system boundaries
@@ -657,10 +751,24 @@ Define:
 - authorization
 - governance boundaries
 - integration boundaries
+- product/platform boundaries
+- technical interfaces between platform capabilities and Phase 1 products
+
+## Architectural Constraint
+
+P2-01 must implement the governance established by the Knowledge Foundation.
+
+It must not redefine, bypass, or silently weaken the authority boundaries established by S1-04.
 
 ## Deliverable
 
-Platform Architecture specification.
+Approved Knowledge Platform Architecture specification.
+
+## Completion Gate
+
+P2-01 must satisfy its architecture review and approval criteria before implementation of the Knowledge Data Layer begins.
+
+**P2-01: NEXT**
 
 ---
 
@@ -681,7 +789,7 @@ Build:
 - metadata
 - dependency structures
 
-The implementation must follow the six Knowledge System standards.
+The implementation must follow the six Knowledge System standards and the approved P2-01 architecture.
 
 ---
 
@@ -700,6 +808,8 @@ Create the governed programmatic interface through which:
 can access approved knowledge.
 
 The API must not bypass Knowledge System governance.
+
+Implementation must follow the approved P2-01 architecture and Knowledge System standards.
 
 ---
 
@@ -950,7 +1060,7 @@ The goal is controlled automation, not uncontrolled content generation.
 
 # 10. PHASE 5 — SCALE & ECOSYSTEM
 
-**Status:** 🔵 LONG-TERM
+**Status:** 🔭 LONG-TERM
 
 Once the core platform proves itself, potential products include:
 
@@ -978,7 +1088,7 @@ These should be developed only when justified by:
 
 # 11. PHASE 6 — GLOBAL PLATFORM
 
-**Status:** 🔵 LONG-TERM VISION
+**Status:** 🔭 LONG-TERM VISION
 
 The architecture should eventually support:
 
@@ -1005,14 +1115,27 @@ Verified released baseline:
 - `S1-04.4-ES-v1.0`
 - `S1-04.5-KLS-v1.0`
 - `S1-04.6-KDRS-v1.0`
+- `S1-04-Knowledge-Foundation-v1.0`
 
-Latest **verified Git release tag currently established**:
+The S1-04 Knowledge Foundation aggregate release is:
 
-`S1-04.6-KDRS-v1.0`
+`S1-04-Knowledge-Foundation-v1.0`
 
-The S1-04.7 integration review has been completed and approved in the roadmap and architecture record.
+This aggregate release represents the completed S1-04 Knowledge Foundation, including:
 
-**Release checkpoint note:** the Git release tag for the S1-04.7 completion checkpoint must be created before the repository is considered the final released S1-04 baseline.
+- KAS v1.0
+- KEF v1.0
+- MTS v1.0
+- ES v1.0
+- KLS v1.0
+- KDRS v1.0
+- S1-04.7 Knowledge Foundation Integration Review
+
+The S1-04.7 integration review does not require a separate Git tag.
+
+The aggregate S1-04 release is the verified Git release checkpoint for the completed Knowledge Foundation.
+
+The repository is currently synchronized with `origin/main` and the working tree is clean.
 
 ---
 
@@ -1022,19 +1145,26 @@ The S1-04.7 integration review has been completed and approved in the roadmap an
 
 `PHASE 2 — PLATFORM ENGINEERING`
 
-**Current milestone:**
+**Completed milestone:**
 
-`P2-01 — Knowledge Platform Architecture`
+`P2-00 — Product & Business Architecture`
 
-**Status:** 🟢 CURRENT
+**Completed deliverables:**
+
+- `P2-00.1 — Product & Business Architecture`
+- `P2-00.2 — Phase 1 Product Portfolio & Commercial Architecture`
 
 **Next milestone:**
 
 `P2-01 — Knowledge Platform Architecture`
 
-The S1-04 Knowledge Foundation is closed at the project-governance level.
+**Status:** 🟡 NEXT
 
-Before implementation begins, the S1-04.7 Git completion checkpoint must be created and verified.
+P2-01 has not yet entered implementation.
+
+The approved P2-00 Product & Business Architecture and the S1-04 Knowledge Foundation are the principal architectural inputs for P2-01.
+
+The project must not proceed to Knowledge Data Layer implementation until P2-01 architecture has been completed, reviewed, and approved.
 
 ---
 
@@ -1092,13 +1222,17 @@ AMAR SMART DOCTOR
 │
 ├── PHASE 2 — PLATFORM ENGINEERING        🟢
 │   │
-│   ├── P2-01 Platform Architecture       🟢 CURRENT
-│   ├── P2-02 Knowledge Data Layer        ⬜
-│   ├── P2-03 Knowledge API               ⬜
+│   ├── P2-00 Product & Business Architecture ✅
+│   │   ├── P2-00.1 Product & Business Architecture ✅
+│   │   └── P2-00.2 Phase 1 Product Portfolio & Commercial Architecture ✅
+│   │
+│   ├── P2-01 Platform Architecture       🟡 NEXT
+│   ├── P2-02 Knowledge Data Layer         ⬜
+│   ├── P2-03 Knowledge API                ⬜
 │   ├── P2-04 AI Workforce Infrastructure ⬜
 │   └── P2-05 Search & Retrieval           ⬜
 │
-├── PHASE 3 — MVP PUBLIC PRODUCT          ⬜
+├── PHASE 3 — MVP PUBLIC PRODUCT           ⬜
 │   │
 │   ├── Public Website
 │   ├── Search
@@ -1107,7 +1241,7 @@ AMAR SMART DOCTOR
 │   ├── Analytics
 │   └── Editorial/Admin
 │
-├── PHASE 4 — AI KNOWLEDGE OPERATIONS     ⬜
+├── PHASE 4 — AI KNOWLEDGE OPERATIONS      ⬜
 │   │
 │   ├── Research
 │   ├── Curation
@@ -1119,7 +1253,7 @@ AMAR SMART DOCTOR
 │   ├── Publishing
 │   └── Analytics
 │
-├── PHASE 5 — SCALE & ECOSYSTEM           🔵
+├── PHASE 5 — SCALE & ECOSYSTEM            🔭
 │   │
 │   ├── Mobile
 │   ├── Doctor Platform
@@ -1128,7 +1262,7 @@ AMAR SMART DOCTOR
 │   ├── Research
 │   └── Enterprise API
 │
-└── PHASE 6 — GLOBAL PLATFORM             🔵
+└── PHASE 6 — GLOBAL PLATFORM              🔭
     │
     ├── Multilingual
     ├── Multi-country
@@ -1140,17 +1274,29 @@ AMAR SMART DOCTOR
 
 # 16. Immediate Next Action
 
-The next project action is:
-
-> **Create and verify the S1-04.7 Git completion checkpoint.**
-
-After that checkpoint is released and the working tree is clean:
+The next project milestone is:
 
 > **P2-01 — Knowledge Platform Architecture**
 
-Do not begin platform implementation before P2-01 architecture is approved.
+P2-01 will translate the approved S1-04 Knowledge Foundation and P2-00 Product & Business Architecture into the technical architecture of the Knowledge Platform.
 
 P2-01 is an architecture milestone, not a coding milestone.
+
+Do not begin Knowledge Data Layer implementation before P2-01 architecture is reviewed and approved.
+
+The execution sequence is:
+
+```text
+Roadmap v1.2
+      ↓
+P2-01 Architecture
+      ↓
+Architecture Review
+      ↓
+Approval
+      ↓
+P2-02 Knowledge Data Layer
+```
 
 ---
 
@@ -1237,10 +1383,11 @@ Significant roadmap changes should be recorded in the project Decision Log.
 
 # 20. Change History
 
-| Version | Date | Change | Status |
-|---|---|---|---|
-| 1.0 | 2026-08-08 | Formalized the Master Roadmap as the controlling project roadmap; incorporated S1-04 progress; added KDRS; replaced standalone Knowledge Versioning milestone with cross-cutting version governance; established S1-04.7 integration review; documented Phase 2–6 roadmap and MVP target | Superseded |
-| 1.1 | 2026-08-08 | Closed S1-04 and S1-04.7 in the roadmap; removed obsolete “Integration Review — NEXT” state; corrected current position; advanced roadmap to Phase 2 / P2-01; documented the remaining S1-04 Git release-checkpoint requirement | Active |
+| Version | Date       | Change                                                                                                                                                                                                                                                                                     | Status     |
+| ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
+| 1.0     | 2026-08-08 | Formalized the Master Roadmap as the controlling project roadmap; incorporated S1-04 progress; added KDRS; replaced standalone Knowledge Versioning milestone with cross-cutting version governance; established S1-04.7 integration review; documented Phase 2–6 roadmap and MVP target | Superseded |
+| 1.1     | 2026-08-08 | Closed S1-04 and S1-04.7 in the roadmap; removed obsolete “Integration Review — NEXT” state; corrected current position; advanced roadmap to Phase 2 / P2-01; documented the remaining S1-04 Git release-checkpoint requirement | Superseded |
+| 1.2     | 2026-08-12 | Reconciled the roadmap with the completed S1-04 aggregate release and completed P2-00 Product & Business Architecture; incorporated P2-00.1 and P2-00.2; clarified the P2-00 → P2-01 architectural relationship; updated the Phase 2 sequence, current project state, Git release baseline, immediate next action, and removed the obsolete separate S1-04.7 Git checkpoint requirement | Active |
 
 ---
 
