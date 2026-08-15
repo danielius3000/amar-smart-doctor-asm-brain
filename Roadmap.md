@@ -2,13 +2,13 @@
 
 **Document ID:** ASM-ROADMAP-001
 **Document Name:** Amar Smart Doctor Master Roadmap
-**Version:** 1.2
+**Version:** 1.3
 **Status:** Active
 **Owner:** Amar Smart Doctor
 **System:** ASM Brain
 **Repository:** amar-smart-doctor-asm-brain
 **Created:** 2026-08-08
-**Updated:** 2026-08-12
+**Updated:** 2026-08-15
 
 ---
 
@@ -722,7 +722,7 @@ Knowledge Platform Architecture
 
 # P2-01 — Knowledge Platform Architecture
 
-**Status:** 🟡 NEXT
+**Status:** ✅ COMPLETE
 
 ## Objective
 
@@ -774,7 +774,7 @@ P2-01 must satisfy its architecture review and approval criteria before implemen
 
 # P2-02 — Knowledge Data Layer
 
-**Status:** ⬜ PLANNED
+**Status:** 🟡 NEXT
 
 Build:
 
@@ -1116,6 +1116,7 @@ Verified released baseline:
 - `S1-04.5-KLS-v1.0`
 - `S1-04.6-KDRS-v1.0`
 - `S1-04-Knowledge-Foundation-v1.0`
+- `P2-01-knowledge-platform-architecture-v1.0`
 
 The S1-04 Knowledge Foundation aggregate release is:
 
@@ -1135,6 +1136,18 @@ The S1-04.7 integration review does not require a separate Git tag.
 
 The aggregate S1-04 release is the verified Git release checkpoint for the completed Knowledge Foundation.
 
+The completed P2-01 Knowledge Platform Architecture release is:
+
+`P2-01-knowledge-platform-architecture-v1.0`
+
+This release includes:
+
+- `P2-01 Knowledge Platform Architecture.md`
+- `P2-01.0 Architecture Brief & Scope.md`
+- `P2-01.1 System Context & Platform Boundary.md`
+
+The P2-01 release is the verified Git release checkpoint for the completed Knowledge Platform Architecture milestone.
+
 The repository is currently synchronized with `origin/main` and the working tree is clean.
 
 ---
@@ -1145,26 +1158,35 @@ The repository is currently synchronized with `origin/main` and the working tree
 
 `PHASE 2 — PLATFORM ENGINEERING`
 
-**Completed milestone:**
+**Completed milestones:**
 
-`P2-00 — Product & Business Architecture`
+- `P2-00 — Product & Business Architecture`
+- `P2-01 — Knowledge Platform Architecture`
 
-**Completed deliverables:**
+**Completed P2-00 deliverables:**
 
 - `P2-00.1 — Product & Business Architecture`
 - `P2-00.2 — Phase 1 Product Portfolio & Commercial Architecture`
 
+**Completed P2-01 deliverables:**
+
+- `P2-01.0 — Architecture Brief & Scope`
+- `P2-01.1 — System Context & Platform Boundary`
+- `P2-01 — Knowledge Platform Architecture`
+
 **Next milestone:**
 
-`P2-01 — Knowledge Platform Architecture`
+`P2-02 — Knowledge Data Layer`
 
 **Status:** 🟡 NEXT
 
-P2-01 has not yet entered implementation.
+P2-01 Knowledge Platform Architecture has been completed and released.
 
-The approved P2-00 Product & Business Architecture and the S1-04 Knowledge Foundation are the principal architectural inputs for P2-01.
+The approved P2-01 architecture and the S1-04 Knowledge Foundation are the principal architectural inputs for P2-02.
 
-The project must not proceed to Knowledge Data Layer implementation until P2-01 architecture has been completed, reviewed, and approved.
+P2-02 must establish the detailed Knowledge Data Layer architecture and specification before implementation begins.
+
+The project must not proceed to uncontrolled Knowledge Data Layer implementation before the P2-02 architecture and specification have been completed, reviewed, and approved.
 
 ---
 
@@ -1226,8 +1248,12 @@ AMAR SMART DOCTOR
 │   │   ├── P2-00.1 Product & Business Architecture ✅
 │   │   └── P2-00.2 Phase 1 Product Portfolio & Commercial Architecture ✅
 │   │
-│   ├── P2-01 Platform Architecture       🟡 NEXT
-│   ├── P2-02 Knowledge Data Layer         ⬜
+│   ├── P2-01 Knowledge Platform Architecture ✅
+│   │   ├── P2-01.0 Architecture Brief & Scope ✅
+│   │   ├── P2-01.1 System Context & Platform Boundary ✅
+│   │   └── P2-01 Architecture Specification ✅
+│   │
+│   ├── P2-02 Knowledge Data Layer         🟡 NEXT
 │   ├── P2-03 Knowledge API                ⬜
 │   ├── P2-04 AI Workforce Infrastructure ⬜
 │   └── P2-05 Search & Retrieval           ⬜
@@ -1276,26 +1302,36 @@ AMAR SMART DOCTOR
 
 The next project milestone is:
 
-> **P2-01 — Knowledge Platform Architecture**
+> **P2-02 — Knowledge Data Layer**
 
-P2-01 will translate the approved S1-04 Knowledge Foundation and P2-00 Product & Business Architecture into the technical architecture of the Knowledge Platform.
+P2-01 Knowledge Platform Architecture has been completed, reviewed, committed, tagged, and pushed.
 
-P2-01 is an architecture milestone, not a coding milestone.
+P2-02 will translate the approved P2-01 architecture and the S1-04 Knowledge Foundation into the detailed architecture, specification, and implementation foundation for the Knowledge Data Layer.
 
-Do not begin Knowledge Data Layer implementation before P2-01 architecture is reviewed and approved.
+P2-02 is a platform engineering milestone.
+
+The project must not begin uncontrolled data-layer implementation before the P2-02 architecture and specification have been properly defined, reviewed, and approved.
 
 The execution sequence is:
 
 ```text
-Roadmap v1.2
+P2-01 Knowledge Platform Architecture
       ↓
-P2-01 Architecture
+P2-01 Release
+      ↓
+P2-02 Knowledge Data Layer
+      ↓
+P2-02 Data Architecture / Specification
       ↓
 Architecture Review
       ↓
 Approval
       ↓
-P2-02 Knowledge Data Layer
+Implementation
+      ↓
+Verification
+      ↓
+Release
 ```
 
 ---
@@ -1308,23 +1344,27 @@ Future milestones are planning references only.
 
 The existence of a future item in this roadmap does not authorize its implementation before its scheduled milestone.
 
-For example, while P2-01 is active:
+For example, while P2-02 is active:
 
 **CURRENT**
 
-`P2-01 Knowledge Platform Architecture`
+`P2-02 Knowledge Data Layer`
 
 The following remain **NOT NOW**:
 
-- Knowledge Data Layer implementation
-- Platform API implementation
-- Mobile Application
+- Knowledge API implementation
 - AI Workforce implementation
-- Knowledge Graph implementation
-- Search Engine implementation
+- Search & Retrieval implementation
+- Knowledge Graph implementation beyond the approved P2-02 scope
 - Public Website implementation
+- Mobile Application
+- Doctor Platform
+- Hospital Platform
+- Future product implementation
 
 This rule exists to prevent scope creep and premature implementation.
+
+P2-02 must remain focused on establishing the governed Knowledge Data Layer according to the approved P2-01 architecture and the S1-04 Knowledge Foundation.
 
 ---
 
@@ -1344,7 +1384,9 @@ A mature system is not measured by the number of Markdown files.
 
 ### Rule 4 — Complete before expanding
 
-A milestone must satisfy its acceptance criteria before the next major milestone begins.
+A milestone must satisfy its acceptance criteria and release requirements before the next major milestone begins.
+
+For the current P2-02 milestone, architecture and specification must be reviewed and approved before implementation begins.
 
 ### Rule 5 — MVP scope is controlled
 
@@ -1383,11 +1425,12 @@ Significant roadmap changes should be recorded in the project Decision Log.
 
 # 20. Change History
 
-| Version | Date       | Change                                                                                                                                                                                                                                                                                     | Status     |
-| ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
-| 1.0     | 2026-08-08 | Formalized the Master Roadmap as the controlling project roadmap; incorporated S1-04 progress; added KDRS; replaced standalone Knowledge Versioning milestone with cross-cutting version governance; established S1-04.7 integration review; documented Phase 2–6 roadmap and MVP target | Superseded |
-| 1.1     | 2026-08-08 | Closed S1-04 and S1-04.7 in the roadmap; removed obsolete “Integration Review — NEXT” state; corrected current position; advanced roadmap to Phase 2 / P2-01; documented the remaining S1-04 Git release-checkpoint requirement | Superseded |
-| 1.2     | 2026-08-12 | Reconciled the roadmap with the completed S1-04 aggregate release and completed P2-00 Product & Business Architecture; incorporated P2-00.1 and P2-00.2; clarified the P2-00 → P2-01 architectural relationship; updated the Phase 2 sequence, current project state, Git release baseline, immediate next action, and removed the obsolete separate S1-04.7 Git checkpoint requirement | Active |
+| Version | Date       | Change                                                                                                                                                                                                                                                                                                                                                                                  | Status     |
+| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| 1.0     | 2026-08-08 | Formalized the Master Roadmap as the controlling project roadmap; incorporated S1-04 progress; added KDRS; replaced standalone Knowledge Versioning milestone with cross-cutting version governance; established S1-04.7 integration review; documented Phase 2–6 roadmap and MVP target                                                                                                | Superseded |
+| 1.1     | 2026-08-08 | Closed S1-04 and S1-04.7 in the roadmap; removed obsolete “Integration Review — NEXT” state; corrected current position; advanced roadmap to Phase 2 / P2-01; documented the remaining S1-04 Git release-checkpoint requirement                                                                                                                                                         | Superseded |
+| 1.2     | 2026-08-12 | Reconciled the roadmap with the completed S1-04 aggregate release and completed P2-00 Product & Business Architecture; incorporated P2-00.1 and P2-00.2; clarified the P2-00 → P2-01 architectural relationship; updated the Phase 2 sequence, current project state, Git release baseline, immediate next action, and removed the obsolete separate S1-04.7 Git checkpoint requirement | Superseded |
+| 1.3     | 2026-08-15 | Reconciled the Master Roadmap with the completed and released P2-01 Knowledge Platform Architecture; advanced P2-01 to complete, advanced P2-02 to next, updated the current project state, current position, immediate next action, roadmap execution scope, and Git release baseline.                                                                                                 | Active     |
 
 ---
 
