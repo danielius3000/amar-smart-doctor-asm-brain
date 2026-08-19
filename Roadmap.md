@@ -2,13 +2,13 @@
 
 **Document ID:** ASM-ROADMAP-001
 **Document Name:** Amar Smart Doctor Master Roadmap
-**Version:** 1.3
+**Version:** 1.4
 **Status:** Active
 **Owner:** Amar Smart Doctor
 **System:** ASM Brain
 **Repository:** amar-smart-doctor-asm-brain
 **Created:** 2026-08-08
-**Updated:** 2026-08-15
+**Updated:** 2026-08-20
 
 ---
 
@@ -774,22 +774,85 @@ P2-01 must satisfy its architecture review and approval criteria before implemen
 
 # P2-02 — Knowledge Data Layer
 
-**Status:** 🟡 NEXT
+**Status:** CURRENT
 
-Build:
+## Objective
 
-- Knowledge Asset storage
-- medical concepts
-- taxonomy relationships
-- knowledge relationships
-- evidence references
-- lifecycle states
-- versions
-- review states
-- metadata
-- dependency structures
+Translate the approved P2-01 Knowledge Platform Architecture and S1-04 Knowledge Foundation into the detailed logical data-model, data-layer architecture, and implementation foundation required for the Knowledge Data Layer.
 
-The implementation must follow the six Knowledge System standards and the approved P2-01 architecture.
+P2-02 is an architecture-to-implementation milestone.
+
+The milestone must establish the governed logical and physical foundations required for subsequent implementation while preserving the separation between logical architecture and physical implementation.
+
+## Approved Deliverables
+
+### P2-02.2 — Detailed Knowledge Data Model Specification
+
+**Status:** APPROVED — BASELINE
+
+**Document ID:** `ASM-P2-02.2`
+
+**Version:** `1.0`
+
+Defines the approved logical data model for the Knowledge Data Layer, including:
+
+- Knowledge Asset
+- Knowledge Asset Version
+- Taxonomy Concept
+- identity semantics
+- versioning semantics
+- lifecycle semantics
+- governance boundaries
+- evidence and provenance boundaries
+- relationship boundaries
+- historical reconstruction requirements
+- multilingual representation principles
+- logical data-model constraints
+
+P2-02.2 deliberately does not define:
+
+- database tables
+- SQL schemas
+- ORM models
+- database-specific data types
+- physical indexes
+- database engine selection
+- search-index implementation
+- vector-storage implementation
+- caching architecture
+- API implementation
+
+P2-02.2 has completed its Critical Architecture Review and has been approved as the v1.0 logical Knowledge Data Model baseline.
+
+## Remaining P2-02 Work
+
+P2-02 remains active.
+
+Remaining work may include, subject to the approved P2-02 scope:
+
+- detailed physical data-layer architecture
+- physical schema design
+- evidence data model detail
+- governance record model
+- relationship model detail
+- temporal model
+- implementation specifications
+- migration/initialization strategy where required
+- implementation readiness
+- architecture review
+- implementation
+- verification
+- release
+
+The exact remaining deliverables must be governed by the approved P2-02 scope and must not be invented merely to expand documentation.
+
+The implementation must follow:
+
+- S1-04 Knowledge Foundation
+- P2-01 Knowledge Platform Architecture
+- approved P2-02 architecture and specifications
+
+**P2-02: CURRENT**
 
 ---
 
@@ -1174,19 +1237,25 @@ The repository is currently synchronized with `origin/main` and the working tree
 - `P2-01.1 — System Context & Platform Boundary`
 - `P2-01 — Knowledge Platform Architecture`
 
-**Next milestone:**
+**Current milestone:**
 
 `P2-02 — Knowledge Data Layer`
 
-**Status:** 🟡 NEXT
+**Status:** CURRENT
 
 P2-01 Knowledge Platform Architecture has been completed and released.
 
-The approved P2-01 architecture and the S1-04 Knowledge Foundation are the principal architectural inputs for P2-02.
+P2-02 Knowledge Data Layer is now the active project milestone.
 
-P2-02 must establish the detailed Knowledge Data Layer architecture and specification before implementation begins.
+The approved P2-01 architecture and S1-04 Knowledge Foundation are the principal architectural inputs for P2-02.
 
-The project must not proceed to uncontrolled Knowledge Data Layer implementation before the P2-02 architecture and specification have been completed, reviewed, and approved.
+P2-02.2 — Detailed Knowledge Data Model Specification v1.0 has been completed, reviewed, and approved as the logical data-model baseline.
+
+P2-02 is not yet complete.
+
+The remaining P2-02 work must continue under the approved milestone scope and must preserve the logical/physical architecture boundary established by P2-02.2.
+
+The project must not proceed to uncontrolled implementation outside the approved P2-02 architecture and specification.
 
 ---
 
@@ -1253,7 +1322,8 @@ AMAR SMART DOCTOR
 │   │   ├── P2-01.1 System Context & Platform Boundary ✅
 │   │   └── P2-01 Architecture Specification ✅
 │   │
-│   ├── P2-02 Knowledge Data Layer         🟡 NEXT
+│   ├── P2-02 Knowledge Data Layer         🟡 CURRENT
+│   ├── P2-02.2 Detailed Knowledge Data Model Specification  ✓ APPROVED
 │   ├── P2-03 Knowledge API                ⬜
 │   ├── P2-04 AI Workforce Infrastructure ⬜
 │   └── P2-05 Search & Retrieval           ⬜
@@ -1300,17 +1370,19 @@ AMAR SMART DOCTOR
 
 # 16. Immediate Next Action
 
-The next project milestone is:
+The current project milestone is:
 
 > **P2-02 — Knowledge Data Layer**
 
 P2-01 Knowledge Platform Architecture has been completed, reviewed, committed, tagged, and pushed.
 
-P2-02 will translate the approved P2-01 architecture and the S1-04 Knowledge Foundation into the detailed architecture, specification, and implementation foundation for the Knowledge Data Layer.
+P2-02 Knowledge Data Layer is now the active milestone.
 
-P2-02 is a platform engineering milestone.
+P2-02.2 — Detailed Knowledge Data Model Specification v1.0 has been completed, reviewed, and approved as an architectural baseline.
 
-The project must not begin uncontrolled data-layer implementation before the P2-02 architecture and specification have been properly defined, reviewed, and approved.
+P2-02.2 establishes the approved logical data-model foundation for the Knowledge Data Layer.
+
+P2-02 itself remains active until its complete architecture, implementation, verification, and release criteria are satisfied.
 
 The execution sequence is:
 
@@ -1321,11 +1393,13 @@ P2-01 Release
       ↓
 P2-02 Knowledge Data Layer
       ↓
-P2-02 Data Architecture / Specification
+P2-02.2 Logical Data Model Specification
       ↓
-Architecture Review
+P2-02.2 Architecture Review
       ↓
-Approval
+P2-02.2 Approval
+      ↓
+Remaining P2-02 Architecture / Specification
       ↓
 Implementation
       ↓
@@ -1365,6 +1439,8 @@ The following remain **NOT NOW**:
 This rule exists to prevent scope creep and premature implementation.
 
 P2-02 must remain focused on establishing the governed Knowledge Data Layer according to the approved P2-01 architecture and the S1-04 Knowledge Foundation.
+
+P2-02.2 is an approved architectural baseline within the active P2-02 milestone and does not authorize implementation outside the approved P2-02 scope.
 
 ---
 
@@ -1430,7 +1506,8 @@ Significant roadmap changes should be recorded in the project Decision Log.
 | 1.0     | 2026-08-08 | Formalized the Master Roadmap as the controlling project roadmap; incorporated S1-04 progress; added KDRS; replaced standalone Knowledge Versioning milestone with cross-cutting version governance; established S1-04.7 integration review; documented Phase 2–6 roadmap and MVP target                                                                                                | Superseded |
 | 1.1     | 2026-08-08 | Closed S1-04 and S1-04.7 in the roadmap; removed obsolete “Integration Review — NEXT” state; corrected current position; advanced roadmap to Phase 2 / P2-01; documented the remaining S1-04 Git release-checkpoint requirement                                                                                                                                                         | Superseded |
 | 1.2     | 2026-08-12 | Reconciled the roadmap with the completed S1-04 aggregate release and completed P2-00 Product & Business Architecture; incorporated P2-00.1 and P2-00.2; clarified the P2-00 → P2-01 architectural relationship; updated the Phase 2 sequence, current project state, Git release baseline, immediate next action, and removed the obsolete separate S1-04.7 Git checkpoint requirement | Superseded |
-| 1.3     | 2026-08-15 | Reconciled the Master Roadmap with the completed and released P2-01 Knowledge Platform Architecture; advanced P2-01 to complete, advanced P2-02 to next, updated the current project state, current position, immediate next action, roadmap execution scope, and Git release baseline.                                                                                                 | Active     |
+| 1.3     | 2026-08-15 | Reconciled the Master Roadmap with the completed and released P2-01 Knowledge Platform Architecture; advanced P2-01 to complete, advanced P2-02 to next, updated the current project state, current position, immediate next action, roadmap execution scope, and Git release baseline.                                                                                                 | Superseded |
+| 1.4     | 2026-08-20 | Reconciled the Master Roadmap with the approval of P2-02.2 Detailed Knowledge Data Model Specification v1.0; advanced P2-02 from NEXT to CURRENT; recorded P2-02.2 as an approved logical data-model baseline; updated current project state, current position, immediate next action, and P2-02 execution status. | Active |
 
 ---
 
